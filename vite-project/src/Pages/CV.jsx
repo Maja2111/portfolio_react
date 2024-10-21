@@ -1,3 +1,6 @@
+import React from 'react';
+import 'vite-project/src/Styling/pagesStyling.css';
+
 const CV = () => {
   return;
 };
