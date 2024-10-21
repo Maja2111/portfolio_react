@@ -1,6 +1,6 @@
 //import Fontawsome  from 'react-fontawesome'; noch nicht klar welche Biliothek
 import React from 'react';
-import Styling from 'vite-project/src/Styling/backToHomeButton.css';
+import '../../Styling/backToHomeButton.css';
 
 const BackToHomeButton = () => {
   return;

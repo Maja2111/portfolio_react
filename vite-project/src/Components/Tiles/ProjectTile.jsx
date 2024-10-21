@@ -1,5 +1,5 @@
 import React from 'react';
-import 'vite-project/src/Styling/tile.css';
+import '../../Styling/tile.css';
 
 const ProjectTile = () => {
   return;

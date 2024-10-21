@@ -1,5 +1,5 @@
 import React from 'react';
-import Styling from 'vite-project/src/Styling/languageSwitchButton.css';
+import '../../Styling/languageSwitchButton.css';
 
 const LanguageSwitch = () => {
   return;

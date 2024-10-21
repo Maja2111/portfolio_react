@@ -170,6 +170,8 @@ vite-project/
 └── package.json
 ```
 
+21.10.2024
+
 ### FontAwesome in React
 
 #### Installation

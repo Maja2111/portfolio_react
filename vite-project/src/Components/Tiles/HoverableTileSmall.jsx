@@ -20,7 +20,7 @@ const HoverableTileSmall = ({ children, to, className }) => {
 
   //Styling für den Hover -Effect
   const tileStyle = {
-    transform: isHoverd ? 'scale(1.05)' : 'scale(1.03)',
+    transform: isHoverd ? 'scale(0.85)' : 'scale(1)',
     transition: 'transform 0.3s ease-in-out',
     cursor: 'pointer', //cursor ändert sich auf Hand
   };

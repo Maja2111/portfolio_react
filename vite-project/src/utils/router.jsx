@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import App from './App';
+import App from '../App';
 import Aboutme from '../Pages/Aboutme';
 import Contact from '../Pages/Contact';
 import CV from '../Pages/CV';

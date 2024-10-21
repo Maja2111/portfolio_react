@@ -1,0 +1,23 @@
+/* tile.css */
+.tilecontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1 px solid #ccc;
+}
+
+.tileicon {
+  color: black;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Spezifische Styles für AboutmeTile */
+.aboutmetile {
+  background-color: pink;
+}
+
+/* Spezifische Styles für ContactTile */
+.contacttile {
+  background-color: #fff7e6;
+}

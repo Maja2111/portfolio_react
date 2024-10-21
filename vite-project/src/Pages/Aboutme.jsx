@@ -8,9 +8,9 @@
  */
 
 import React from 'react';
-import 'vite-project/src/Styling/pagesStyling.css';
-import BackToHomeButton from './BackToHomeButton';
-import LanguageSwitch from './LanguageSwitch';
+import '../Styling/pagesStyling.css';
+import BackToHomeButton from '../Components/Buttons/BackToHome';
+import LanguageSwitch from '../Components/Buttons/LanguageSwitch';
 
 const AboutMe = () => {
   return (

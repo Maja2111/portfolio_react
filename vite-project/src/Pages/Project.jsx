@@ -1,5 +1,5 @@
 import React from 'react';
-import 'vite-project/src/Styling/pagesStyling.css';
+import '../Styling/pagesStyling.css';
 
 const Projects = () => {
   return;
