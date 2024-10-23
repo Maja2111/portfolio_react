@@ -1,23 +1,49 @@
-/* tile.css */
+.tilecontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .tilecontent {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1 px solid #ccc;
+  justify-content: center;
+  height: 100%;
 }
 
 .tileicon {
-  color: black;
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Spezifische Styles für AboutmeTile */
-.aboutmetile {
+.tilelink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tilesmall {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tilesmall:hover {
+  transform: scale(1.05);
+}
+
+.aboutmetile,
+.contacttile,
+.cvtile,
+.iconstile,
+.maintile,
+.projecttile {
   background-color: pink;
 }
 
-/* Spezifische Styles für ContactTile */
-.contacttile {
-  background-color: #fff7e6;
+.maintileimg {
+  width: 4rem;
 }

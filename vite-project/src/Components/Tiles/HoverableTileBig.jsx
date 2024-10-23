@@ -9,27 +9,28 @@ import { useState } from 'react';
 
 const HoverableTileBig = ({ children, className }) => {
   //Implemtierung vom Hovereffect, standartwert false
-  const [isHoverd, setIsHoverd] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   //Eventhandler MouserOver, state verändert sich  auf true
   const handleMouseOver = () => {
-    setIsHoverd(true);
+    setIsHovered(true);
   };
   // Eventhandler MouserOut, state verändert sich auf false
   const handleMouseOut = () => {
-    setIsHoverd(false);
+    setIsHovered(false);
   };
   //Styling für den Hover
   const tileStyle = {
-    transform: isHoverd ? 'scale(1.05)' : 'scale(1)',
+    transform: isHovered ? 'scale(1.05)' : 'scale(1)',
     transition: 'transform 0.3s ease-in-out',
   };
   return (
     <div
-      className="tile aboutmetile"
+      className={`tile ${className}`}
       style={tileStyle}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
+      {typeof children === 'function' ? children({ isHovered }) : children}
       {/*Iteriert über alle Kind-Elemente und klont sie mit zusätzlicher isHovered-Prop:
         - React.Children.map: Sicheres Iterieren über children, auch wenn nur ein Kind vorhanden ist.
         - React.cloneElement: Erstellt eine Kopie jedes Kind-Elements.
@@ -40,7 +41,7 @@ const HoverableTileBig = ({ children, className }) => {
         - Erhält die ursprüngliche Struktur und Props der Kinder, während isHovered hinzugefügt wird.
         - Macht die HoverableTile flexibel für verschiedene Inhalte und Anwendungsfälle.*/}
       {React.Children.map(children, (child) =>
-        React.cloneElement(child, { isHoverd })
+        React.cloneElement(child, { isHovered })
       )}
     </div>
   );

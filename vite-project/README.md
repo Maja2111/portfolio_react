@@ -4,7 +4,7 @@
 
 Das Portfolio zeigt meine Fähigkeiten in Webentwicklung, Design und Projektmanagement. Es besteht aus verschiedenen Kacheln, die unterschiedliche Inhalte anbieten.
 
-![alt Skizze](vite-project/portfolio_skizze.png)
+![alt Skizze](./Images/portfolio_skizze.png)
 
 ## Projektplanung
 
@@ -25,57 +25,11 @@ Das Portfolio zeigt meine Fähigkeiten in Webentwicklung, Design und Projektmana
 
 - **Frontend**: React, React Router
 - **State Management**: Context API (oder Redux, je nach Bedarf)
-- **Backend**: Keine Backend-Integration erforderlich, es sei denn, du möchtest dynamische Inhalte.
 
 ## Design und Benutzeroberfläche
 
 - **Wireframes**: [Links zu Wireframes oder Skizzen]
 - **UI-Bibliotheken**: Material-UI oder CSS-Frameworks wie Bootstrap für das Grid-Layout
-
-  - **mögliche Framworks**
-
-    1.  Tailwind CSS\_
-        Beschreibung: Ein utility-first CSS-Framework, das es dir ermöglicht, Designs direkt in deinen HTML-Klassen zu erstellen.
-        Vorteile:
-        Hohe Flexibilität und Anpassungsfähigkeit.
-        Geringe Größe des endgültigen CSS, da nur die verwendeten Klassen generiert werden.
-        Große Community und viele Plugins verfügbar.
-
-    2.  Bulma
-        Beschreibung: Ein modernes CSS-Framework, das auf Flexbox basiert und einfach zu verwenden ist.
-        Vorteile:
-        Saubere und klare Syntax.
-        Responsive Design ohne JavaScript.
-        Gut dokumentiert mit vielen Beispielen.
-
-    3.  Foundation
-        Beschreibung: Ein leistungsstarkes responsives Frontend-Framework, das von ZURB entwickelt wurde.
-        Vorteile:
-        Flexibles Grid-System und viele vorgefertigte Komponenten.
-        Unterstützung für Accessibility und Mobile-First-Ansatz.
-        Anpassbare und modulare Struktur.
-
-    4.  Semantic UI
-        Beschreibung: Ein Framework, das sich auf die Semantik von HTML konzentriert und eine intuitive Syntax bietet.
-        Vorteile:
-        Klare und lesbare Klassen, die den Zweck der Elemente widerspiegeln.
-        Viele vorgefertigte Themen und Anpassungsoptionen.
-        Integration mit JavaScript-Frameworks wie React und Angular.
-
-    5.  Milligram
-        Beschreibung: Ein minimalistisches CSS-Framework, das eine einfache und schnelle Basis für Projekte bietet.
-        Vorteile:
-        Sehr leichtgewichtig (unter 2KB).
-        Schneller Einstieg ohne viel Overhead.
-        Gut für kleine Projekte oder Prototypen.
-
-    6.  Pure.css
-        Beschreibung: Ein leichtgewichtiges CSS-Framework von Yahoo, das nur die grundlegenden Stile bereitstellt.
-        Vorteile:
-        Modularer Aufbau, sodass du nur die benötigten Module einbinden kannst.
-        Ideal für Projekte, bei denen du die Kontrolle über das Design behalten möchtest.
-
-_Unterstütz durch Blackbox AI_
 
 - **Responsive Design**: Für verschiedene Bildschirmgrößen und Geräte
 - **Benutzerfreundlichkeit**: Benutzerfreundliche Navigation und leicht zugängliche Inhalt
@@ -232,14 +186,105 @@ export default AboutMeTile;
   - `/cv`: Lebenslauf
   - `/contact`: Kontakt
 
+### Letzte Entwicklungsschritte
+
+1. Implementierung der HoverableTileSmall Komponente
+
+   - Erstellung einer wiederverwendbaren Komponente für kleine, hover-fähige Kacheln
+   - Integration von React Router für Navigation
+   - Implementierung eines Hover-Effekts mit useState
+
+2. Anpassung der AboutmeTile und ContactTile Komponenten
+
+   - Verwendung der HoverableTileSmall als Basis
+   - Integration von FontAwesome Icons
+   - Anpassung des Stylings basierend auf dem Hover-Zustand
+
+3. Aktualisierung der App.jsx
+
+   - Integration der AboutmeTile und ContactTile in die Hauptnavigation
+   - Verwendung des React Router Outlet für dynamisches Rendering von Unterseiten
+
+4. Erstellung der Aboutme Seite
+
+   - Implementierung des Seiteninhalts mit Überschriften und Textabschnitten
+   - Integration des LanguageSwitch und BackToHomeButton
+
+5. Aktualisierung des React Routers
+
+   - Definition der Routen für die Hauptanwendung und Unterseiten
+
+6. Styling der Komponenten
+
+   - Erstellung einer tile.css für das Styling der Kacheln
+   - Implementierung von responsivem Design
+   - Festlegung von Farben, Größen und Hover-Effekten
+
+7. Debugging und Testing
+   - Überprüfung der korrekten Darstellung im Frontend
+   - Testen der Navigation und Hover-Effekte
+
 ### Nächste Schritte
 
-1. Implementierung der restlichen Tile-Komponenten
-2. Gestaltung des Layouts und der Tile-Anordnung
-3. Entwicklung der Inhalte für die Seitenkomponenten
-4. Styling der Komponenten
-5. Implementierung des Sprachumschalters
-6. Erstellung des BackToHome-Buttons
-7. Responsive Design-Anpassungen
-8. Hinzufügen von Animationen
-9. Umfassende Tests und Fehlerbehebung
+- Implementierung der verbleibenden Kacheln und Seiten (CV, Projects)
+- Vollständige Integration des Sprachumschalters
+- Feinabstimmung des responsiven Designs
+- Implementierung des BackToHome-Buttons auf allen Unterseiten
+- Durchführung von umfassenden Tests auf verschiedenen Geräten und Browsern
+
+<img src="https://e7.pngegg.com/pngimages/99/201/png-clipart-arrow-computer-icons-symbol-down-arrow-angle-logo.png" alt="Pfeil" width="50">
+
+22.10.2024
+
+### Letzte Entwicklungsschritte
+
+### Implementierung der Tile-Komponenten
+
+1. Entwicklung von zwei wiederverwendbaren Hover-Komponenten:
+
+- HoverableTileBig für 2:1 Kacheln (MainTile, IconTile)
+- HoverableTileSmall für 1:1 Kacheln (AboutMe, Contact, CV, Projects)
+- Integration von Hover-Effekten mit unterschiedlichen Skalierungen
+- Implementierung der Navigation mittels React Router
+  FontAwesome Integration
+
+2. Erfolgreiche Einbindung von FontAwesome-Icons:
+
+- Verwendung verschiedener Icon-Typen (solid, brands) für unterschiedliche Tiles
+- Dynamische Farbanpassung der Icons basierend auf Hover-Status
+  Komponenten-Struktur
+
+3. Hauptkomponenten implementiert:
+
+- MainTile (mit MERN-Stack Logo)
+- AboutmeTile (mit Routing zur About-Seite)
+- ContactTile (mit Kontaktformular)
+- ProjectsTile (mit Projektverweis)
+- IconsTile (Skills-Übersicht)
+- CVTile (Lebenslauf-Verweis)
+- Routing-System
+
+4. Implementierung des React Router Systems:
+
+- Integration des Outlet-Components in App.jsx
+- Einrichtung der Navigationslogik für alle Tiles
+  Styling
+
+5. Entwicklung eines einheitlichen Styling-Konzepts
+
+- Implementierung von responsivem Design
+- Dynamische Farbänderungen bei Hover-Effekten
+- Übergangsanimationen für bessere Benutzerinteraktion
+
+### Nächste Schritte
+
+Vollständige Implementierung des Sprachumschalters
+Fertigstellung des Kontaktformulars
+Integration des Projekt-Carousels
+Implementierung des BackToHome-Buttons
+Feinabstimmung des responsiven Designs
+Diese Zusammenfassung zeigt die wichtigsten Entwicklungsfortschritte und gibt einen Überblick über die nächsten geplanten Schritte.
+
+<img src="https://e7.pngegg.com/pngimages/99/201/png-clipart-arrow-computer-icons-symbol-down-arrow-angle-logo.png" alt="Pfeil" width="50">
+
+23.10.2024

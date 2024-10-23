@@ -13,20 +13,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIdBadge } from '@fortawesome/free-solid-svg-icons';
 import HoverableTileSmall from './HoverableTileSmall';
 
-const AboutmeTile = () => {
+const AboutmeTile = ({ isHovered }) => {
   return (
     <>
-      <HoverableTileSmall to="/aboutme" className="aboutmetile">
-        {({ isHovered }) => (
-          <div className="tilecontent">
-            <FontAwesomeIcon
-              icon={faIdBadge}
-              className="tileicon"
-              style={{ color: isHovered ? 'black' : 'grey' }}
-            />
-            <h2 style={{ color: isHovered ? 'black' : 'grey' }}>About Me</h2>
-          </div>
-        )}
+      <HoverableTileSmall to="/aboutme" className="aboutmetile tilecontainer">
+        <div className="tilecontent">
+          <FontAwesomeIcon
+            icon={faIdBadge}
+            className="tileicon"
+            style={{ color: isHovered ? 'black' : 'grey' }}
+          />
+          <h2 style={{ color: isHovered ? 'black' : 'grey' }}>About Me</h2>
+        </div>
       </HoverableTileSmall>
     </>
   );

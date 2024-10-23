@@ -9,18 +9,18 @@ import { useNavigate } from 'react-router-dom';
 
 const HoverableTileSmall = ({ children, to, className }) => {
   //Implemtierung vom Hovereffect, standartwert false
-  const [isHoverd, setIsHoverd] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   //Implementierung  der Navigation
   const navigate = useNavigate();
 
-  const handleMouseOver = () => setIsHoverd(true);
-  const handleMouseOut = () => setIsHoverd(false);
+  const handleMouseOver = () => setIsHovered(true);
+  const handleMouseOut = () => setIsHovered(false);
 
   const handleClick = () => navigate(to);
 
   //Styling für den Hover -Effect
   const tileStyle = {
-    transform: isHoverd ? 'scale(0.85)' : 'scale(1)',
+    transform: isHovered ? 'scale(0.85)' : 'scale(1)',
     transition: 'transform 0.3s ease-in-out',
     cursor: 'pointer', //cursor ändert sich auf Hand
   };
@@ -43,7 +43,7 @@ const HoverableTileSmall = ({ children, to, className }) => {
         - Erhält die ursprüngliche Struktur und Props der Kinder, während isHovered hinzugefügt wird.
         - Macht die HoverableTile flexibel für verschiedene Inhalte und Anwendungsfälle.*/}
       {React.Children.map(children, (child) =>
-        React.cloneElement(child, { isHoverd })
+        React.cloneElement(child, { isHovered })
       )}
     </div>
   );

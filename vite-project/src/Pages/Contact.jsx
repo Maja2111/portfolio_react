@@ -15,6 +15,13 @@
 
 import React from 'react';
 import '../Styling/tile.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faLinkedin,
+  faInstagram,
+  faGithub,
+  faSlack,
+} from '@fortawesome/free-brands-svg-icons';
 import LanguageSwitch from '../Components/Buttons/LanguageSwitch';
 import BackHomeButton from '../Components/Buttons/BackToHome';
 
@@ -55,6 +62,12 @@ const Contact = () => {
         </form>
       </main>
       <footer>
+        <div className="contactIcons">
+          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faSlack} />
+        </div>
         <BackHomeButton />
       </footer>
     </>
