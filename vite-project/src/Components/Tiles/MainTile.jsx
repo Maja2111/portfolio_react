@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import HoverableTileBig from './HoverableTileBig';
+import HoverableTileBig from './Layout/HoverableTileBig';
 import '../../Styling/tile.css';
 
 const MainTile = () => {
@@ -15,7 +15,7 @@ const MainTile = () => {
     <div className="maintile">
       <HoverableTileBig>
         {({ isHovered }) => (
-          <div>
+          <div className="tilecontent">
             <h1 style={{ color: isHovered ? 'black' : 'grey' }}>
               Sabine Weber
             </h1>

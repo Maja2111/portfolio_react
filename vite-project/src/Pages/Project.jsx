@@ -11,7 +11,8 @@
  */
 
 import React, { useState } from 'react';
-import '../Styling/pagesStyling.css';
+import '../Styling/stylingPages/pagesStyling.css';
+import '../Styling/stylingPages/projectPage.css';
 import BackToHomeButton from '../Components/Buttons/BackToHome';
 import LanguageSwitch from '../Components/Buttons/LanguageSwitch';
 import Carousel from '../Components/Carousel/Carousel';
@@ -23,76 +24,57 @@ const Projects = ({ language }) => {
 
   // Funktion zum Rendern der Projektlinks basierend auf Projekttyp (GitHub oder lokal)
   const renderProjectLinks = (project) => {
-    if (project.githubLink) {
-      // Für GitHub-Projekte
-      return (
-        <>
+    return (
+      <div className="projectLinks">
+        {project.link && (
           <a
-            href={project.githubLink}
+            href={project.link}
             target="_blank"
             rel="noopener noreferrer"
+            className="projectLink"
           >
-            {language === 'de' ? 'GitHub Repository' : 'GitHub Repository'}
+            GitHub
           </a>
-          {project.demoLink && (
-            // Zeige Demo-Link nur an, wenn verfügbar
-            <a
-              href={project.demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {language === 'de' ? 'Live Demo' : 'Live Demo'}
-            </a>
-          )}
-        </>
-      );
-    } else if (project.localPath) {
-      // Für lokale Projekte
-      return (
-        <>
-          <p>{language === 'de' ? 'Lokales Projekt' : 'Local Project'}</p>
-          {project.documentationLink && (
-            // Zeige Dokumentations-Link nur an, wenn verfügbar
-            <a
-              href={project.documentationLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {language === 'de' ? 'Dokumentation' : 'Documentation'}
-            </a>
-          )}
-        </>
-      );
-    }
+        )}
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="projectLink"
+          >
+            Live Demo
+          </a>
+        )}
+      </div>
+    );
   };
-
   return (
     <div className="projectsContainer">
-      <header>
-        {/* Animierter Titel mit Sprachunterstützung */}
+      <header className="projectsHeader">
         <h1 className="animateTitle">
           {language === 'de' ? 'Projekte' : 'Projects'}
         </h1>
         <LanguageSwitch />
       </header>
-      <main>
-        {/* Carousel-Komponente mit Projekten und Callback für Projektauswahl */}
+
+      <main className="projectsMain">
         <Carousel projects={projects} onSelectProject={setSelectedProject} />
+
         {selectedProject && (
-          // Zeige Projektdetails nur an, wenn ein Projekt ausgewählt wurde
           <div className="projectDetails">
             <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.description}</p>
-            {/* Render Projektlinks basierend auf Projekttyp */}
+            <p className="projectDescription">{selectedProject.description}</p>
             {renderProjectLinks(selectedProject)}
           </div>
         )}
       </main>
-      <footer>
+
+      <footer className="projectsFooter">
         <BackToHomeButton />
       </footer>
+      {/**schließendes div projectsContainer */}
     </div>
   );
 };
-
 export default Projects;

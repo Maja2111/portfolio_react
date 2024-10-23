@@ -13,24 +13,18 @@ Das Portfolio zeigt meine Fähigkeiten in Webentwicklung, Design und Projektmana
 
 ## Projekte
 
-- **Herausforderung**: Die Projekte sind derzeit lokal oder in öffentlichen GitHub-Repositories gespeichert und können nicht extern verlinkt werden.
-- **mögliche Lösungsstrategien**:
+- **Herausforderung**: Die Projekte sind derzeit lokal oder in öffentlichen GitHub-Repositories gespeichert und können nicht extern verlinkt werden. Es wurde mit:
   - **Git-Submodule**: Verwenden von Git-Submodulen, um Projekte als separate Repositories zu verwalten.
-  - **Lokale Einbindung**: Projekte lokal speichern und in die Portfolio-Komponenten importieren.
-  - **GitHub Pages**: Separate GitHub-Seiten für jedes Projekt erstellen, um sie online zu präsentieren.
-  - **Monorepo-Ansatz**: Nutzung eines Monorepo-Ansatzes, um alle Projekte in einem Repository zu verwalten.
-  - **Dokumentation**: Erstellung einer Dokumentation mit Links zu den GitHub-Repositories und Anweisungen zur lokalen Ausführung der Projekte.
+  - **Online**: Verwendung der bereits Onlinegestellten Projekte.
 
 ## Technologiestack
 
 - **Frontend**: React, React Router
-- **State Management**: Context API (oder Redux, je nach Bedarf)
+- **State Management**: Context API
 
 ## Design und Benutzeroberfläche
 
-- **Wireframes**: [Links zu Wireframes oder Skizzen]
-- **UI-Bibliotheken**: Material-UI oder CSS-Frameworks wie Bootstrap für das Grid-Layout
-
+- **CSS-Design**: selbst geschrieben und mit Unterstützung der Blackbox AI komplementiert
 - **Responsive Design**: Für verschiedene Bildschirmgrößen und Geräte
 - **Benutzerfreundlichkeit**: Benutzerfreundliche Navigation und leicht zugängliche Inhalt
 - **Farbschema**: Einheitliches Farbschema für die gesamte Anwendung verwendete Farbcodes:
@@ -288,3 +282,55 @@ Diese Zusammenfassung zeigt die wichtigsten Entwicklungsfortschritte und gibt ei
 <img src="https://e7.pngegg.com/pngimages/99/201/png-clipart-arrow-computer-icons-symbol-down-arrow-angle-logo.png" alt="Pfeil" width="50">
 
 23.10.2024
+
+### Letzte Entwicklungsschritte
+
+nice to do - responsiv design zusammenfassen
+nice to have - hintergrund im header auf den pages
+Review und Anpassung der Media Queries
+
+1. Identifizierung vorhandener Media Queries in verschiedenen Komponenten
+
+- Analyse der Breakpoints (768px und 480px)
+- Erweiterung der Media Queries für aboutmePage.css
+
+2. AboutMe-Seite
+
+- Grundstruktur implementiert
+- Vorbereitung für zweisprachige Inhalte
+- Media Queries für responsive Darstellung angepasst
+
+### Nächste Schritte
+
+1. AboutMe-Seite fertigstellen:
+
+- Inhalte einfügen (DE/EN)
+- Foto einbinden
+- Styling optimieren
+- Responsive Design testen
+- Sprachumschaltung:
+
+2. LanguageSwitch-Komponente fertigstellen
+
+- Integration in AboutMe-Seite
+- Testing der Sprachumschaltung
+
+3. Nice-to-have Liste:
+
+- Standardisierung der Media Queries über alle Komponenten
+- Hintergrund im Header auf den Pages anpassen
+- Responsives Design zusammenfassen und vereinheitlichen
+
+4. Testing:
+
+- Funktionstest auf verschiedenen Bildschirmgrößen
+- Überprüfung der Sprachumschaltung
+- Test der Navigation und Links
+
+### Offene Punkte:
+
+- Vollständige Implementierung des Sprachumschalters
+- Fertigstellung des Kontaktformulars
+- Integration des Projekt-Carousels
+- Implementierung des BackToHome-Buttons
+- Feinabstimmung des responsiven Designs

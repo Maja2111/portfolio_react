@@ -9,25 +9,17 @@
 
 import React from 'react';
 import '../../Styling/tile.css';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
-import HoverableTileSmall from './HoverableTileSmall';
+import SmallTileLayout from './Layout/SmallTileLayout';
 
-const ProjectTile = ({ isHovered }) => {
+const ProjectTile = () => {
   return (
-    <Link to="/projects" className="tilelink">
-      <HoverableTileSmall className="projecttile">
-        <div className="tilecontent">
-          <FontAwesomeIcon
-            icon={faCode}
-            className="tileicon"
-            style={{ color: isHovered ? 'black' : 'grey' }}
-          />
-          <h2 style={{ color: isHovered ? 'black' : 'grey' }}>Projects</h2>
-        </div>
-      </HoverableTileSmall>
-    </Link>
+    <SmallTileLayout
+      icon={faCode}
+      title="Projects"
+      to="/projects"
+      className="projecttile"
+    />
   );
 };
 export default ProjectTile;

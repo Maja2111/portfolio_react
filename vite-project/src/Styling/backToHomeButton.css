@@ -3,9 +3,14 @@
   bottom: 1rem;
   right: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
+  background-color: #404040;
+  color: #f5f5f5;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.backtohome:hover {
+  background-color: #505050;
 }

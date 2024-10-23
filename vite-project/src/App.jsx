@@ -5,12 +5,12 @@
  */
 
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import './Styling/main.css';
 import MainTile from './Components/Tiles/MainTile';
 import AboutmeTile from './Components/Tiles/AboutmeTile';
 import CVTile from './Components/Tiles/CVTile';
 import ContactTile from './Components/Tiles/ContactTile';
-import ProjectsTile from './Components/Tiles/ProjectTile';
+import ProjectTile from './Components/Tiles/ProjectTile';
 import IconsTile from './Components/Tiles/IconsTile';
 import LanguageSwitch from './Components/Buttons/LanguageSwitch';
 
@@ -23,12 +23,9 @@ function App() {
         <AboutmeTile />
         <CVTile />
         <ContactTile />
-        <ProjectsTile />
+        <ProjectTile />
         <IconsTile />
       </nav>
-      <main>
-        <Outlet /> {/* Outlet ist ein React Router Component */}
-      </main>
     </div>
   );
 }

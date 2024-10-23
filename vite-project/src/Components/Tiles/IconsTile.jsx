@@ -21,14 +21,14 @@ import {
   faApple,
   faMarkdown,
 } from '@fortawesome/free-brands-svg-icons';
-import HoverableTileBig from './HoverableTileBig';
+import HoverableTileBig from './Layout/HoverableTileBig';
 
 const IconsTile = () => {
   return (
     <div className="iconstile">
       <HoverableTileBig>
         {({ isHovered }) => (
-          <div>
+          <div className="tilecontent">
             <h2>Skills</h2>
             <div>
               <FontAwesomeIcon icon={faGithub} />

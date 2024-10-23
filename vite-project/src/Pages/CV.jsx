@@ -14,7 +14,8 @@
  */
 
 import React from 'react';
-import '../Styling/pagesStyling.css';
+import '../Styling/stylingPages/pagesStyling.css';
+import '../Styling/stylingPages/cvPage.css';
 import BackToHomeButton from '../Components/Buttons/BackToHome';
 import LanguageSwitch from '../Components/Buttons/LanguageSwitch';
 
@@ -108,7 +109,6 @@ const CV = ({ language }) => {
       </caption>
       <thead>
         <tr>
-          {' '}
           {/**mapt über die Kopfzeile  und gibt die Überschriften aus */}
           {headers.map((header, index) => (
             <th key={index}>{header}</th>
@@ -116,11 +116,9 @@ const CV = ({ language }) => {
         </tr>
       </thead>
       <tbody>
-        {' '}
         {/**mapt über die Daten und gibt die Zeilen aus */}
         {data.map((item, index) => (
           <tr key={index}>
-            {' '}
             {/**mapt über die Daten und gibt die Abschlüsse und die Position aus */}
             <td>{isEducation ? item.degree : item.position}</td>{' '}
             {/* instution oder  company */}
@@ -134,7 +132,7 @@ const CV = ({ language }) => {
                     src={item.img}
                     alt={isEducation ? 'Zertifikat' : 'Arbeitszeugnis'}
                   />
-                </a>{' '}
+                </a>
                 {/**Zeugnisse und Pfade überprüfen !! */}
               </td>
             )}
@@ -145,7 +143,7 @@ const CV = ({ language }) => {
   );
   return (
     <div className="cvContainer">
-      <header>
+      <header className="cvHeader">
         <h1 className="animateTitle">
           {language === 'de' ? 'Lebenslauf' : 'Curriculum Vitae'}
         </h1>

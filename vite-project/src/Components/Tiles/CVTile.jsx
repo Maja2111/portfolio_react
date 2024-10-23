@@ -9,19 +9,17 @@
 
 import React from 'react';
 import '../../Styling/tile.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
-import HoverableTileSmall from './HoverableTileSmall';
-import { Link } from 'react-router-dom';
+import SmallTileLayout from './Layout/SmallTileLayout';
 
 const CVTile = () => {
   return (
-    <Link to="/cv" className="tilelink">
-      <HoverableTileSmall className="cvtile">
-        <FontAwesomeIcon icon={faUserGraduate} />
-        <h1>go to my CV</h1>
-      </HoverableTileSmall>
-    </Link>
+    <SmallTileLayout
+      icon={faUserGraduate}
+      title="go to my CV"
+      to="/cv"
+      className="cvtile"
+    />
   );
 };
 export default CVTile;

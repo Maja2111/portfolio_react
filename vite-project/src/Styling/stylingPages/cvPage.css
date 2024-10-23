@@ -1,0 +1,257 @@
+.cvContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+/* Header Styling */
+.cvHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+/* Tabellen-Styling */
+table {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  background: rgba(45, 45, 45, 0.9);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabellen-Überschrift */
+caption {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+/* Tabellen-Header */
+th {
+  background-color: #404040;
+  padding: 1rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Tabellen-Zellen */
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #404040;
+}
+
+/* Letzte Zeile ohne Border */
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hover-Effekt für Tabellenzeilen */
+tr:hover {
+  background-color: rgba(64, 64, 64, 0.5);
+}
+
+/* Styling für die Zertifikatsbilder */
+td img {
+  max-width: 50px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+td img:hover {
+  transform: scale(1.2);
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* Tablet Ansicht */
+@media (max-width: 768px) {
+  .cvContainer {
+    padding: 1.5rem;
+  }
+
+  .animateTitle {
+    font-size: 2rem;
+  }
+
+  caption {
+    font-size: 1.3rem;
+  }
+
+  th,
+  td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  td img {
+    max-width: 40px;
+  }
+}
+
+/* Große Smartphone Ansicht */
+@media (max-width: 480px) {
+  .cvContainer {
+    padding: 1rem;
+  }
+
+  .cvHeader {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .animateTitle {
+    font-size: 1.8rem;
+  }
+
+  /* Tabellen-Anpassungen für mobile Ansicht */
+  table {
+    display: block;
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+  }
+
+  caption {
+    font-size: 1.2rem;
+  }
+
+  th,
+  td {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+    min-width: 120px;
+  }
+  td img {
+    max-width: 35px;
+  }
+
+  /* Zusätzliche mobile Anpassungen */
+  .cvSection {
+    margin-bottom: 1.5rem;
+  }
+
+  .cvFooter {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+/* Kleine Smartphone Ansicht */
+@media (max-width: 320px) {
+  .cvContainer {
+    padding: 0.8rem;
+  }
+
+  .animateTitle {
+    font-size: 1.5rem;
+  }
+
+  caption {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    min-width: 100px;
+  }
+
+  td img {
+    max-width: 30px;
+  }
+}
+
+/* Modal für Zertifikatsansicht */
+.certificateModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.closeModal {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Print-Styles für PDF-Export */
+@media print {
+  .cvContainer {
+    padding: 0;
+    background-color: white;
+    color: black;
+  }
+
+  .cvHeader button,
+  .cvFooter button {
+    display: none;
+  }
+
+  table {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+  }
+
+  /* Optimierung für Seitenumbrüche */
+  table {
+    page-break-inside: avoid;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cvSection {
+  animation: fadeIn 0.5s ease-in;
+}

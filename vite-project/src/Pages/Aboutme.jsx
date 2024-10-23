@@ -8,21 +8,21 @@
  */
 
 import React from 'react';
-import '../Styling/pagesStyling.css';
+import '../Styling/stylingPages/pagesStyling.css';
+import '../Styling/stylingPages/aboutmePage.css';
 import BackToHomeButton from '../Components/Buttons/BackToHome';
 import LanguageSwitch from '../Components/Buttons/LanguageSwitch';
 
 const AboutMe = () => {
   return (
     <div className="aboutMeContainer">
-      {' '}
-      {/*äußeres div statt Fragmente*/}
       <header>
         {/*animateTitle findet Verwendung in pagesStyling.css und wird auf jeder page benötigt*/}
         <h1 className="animateTitle">Herzlich Willkommen</h1>
         <LanguageSwitch />
       </header>
       <main>
+        <img src="../Images/Profilbild.jpg" alt="Profilbild" />
         {/*aufgeteilte in 2 sections*/}
         <section>
           <h2>Persönliches</h2>

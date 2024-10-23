@@ -9,24 +9,19 @@
 
 import React from 'react';
 import '../../Styling/tile.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIdBadge } from '@fortawesome/free-solid-svg-icons';
-import HoverableTileSmall from './HoverableTileSmall';
+import SmallTileLayout from './Layout/SmallTileLayout';
 
-const AboutmeTile = ({ isHovered }) => {
+const AboutmeTile = () => {
   return (
-    <>
-      <HoverableTileSmall to="/aboutme" className="aboutmetile tilecontainer">
-        <div className="tilecontent">
-          <FontAwesomeIcon
-            icon={faIdBadge}
-            className="tileicon"
-            style={{ color: isHovered ? 'black' : 'grey' }}
-          />
-          <h2 style={{ color: isHovered ? 'black' : 'grey' }}>About Me</h2>
-        </div>
-      </HoverableTileSmall>
-    </>
+    <div>
+      <SmallTileLayout
+        icon={faIdBadge}
+        title="About Me"
+        to="/aboutme"
+        className="aboutmetile"
+      />
+    </div>
   );
 };
 export default AboutmeTile;
