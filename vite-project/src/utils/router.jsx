@@ -1,5 +1,10 @@
+/**@description:
+ * Implemtierung des Sprachwechsels in der router um diese auf allen pages ausgeben zu können
+ */
+
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { LanguageProvider } from '../Components/Language/LanguageContext';
 import App from '../App';
 import Aboutme from '../Pages/Aboutme';
 import Contact from '../Pages/Contact';
@@ -28,4 +33,12 @@ const router = createBrowserRouter([
     element: <Projects />,
   },
 ]);
-export default router;
+
+const Routes = () => {
+  return (
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
+  );
+};
+export default Routes;

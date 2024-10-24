@@ -21,7 +21,7 @@ main {
   margin: 0 auto;
 }
 
-img {
+.profilbild {
   width: 8rem;
   position: relative;
   top: -2rem;

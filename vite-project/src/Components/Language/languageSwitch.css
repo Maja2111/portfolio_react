@@ -1,0 +1,20 @@
+.languageSwitch {
+  margin: 20px;
+}
+
+.languageSwitch button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.languageSwitch button:hover {
+  background-color: rgb(69, 69, 69);
+}

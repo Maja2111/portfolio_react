@@ -17,9 +17,11 @@ import React from 'react';
 import '../Styling/stylingPages/pagesStyling.css';
 import '../Styling/stylingPages/cvPage.css';
 import BackToHomeButton from '../Components/Buttons/BackToHome';
-import LanguageSwitch from '../Components/Buttons/LanguageSwitch';
+import { useLanguage } from '../Components/Language/LanguageContext';
+import LanguageSwitch from '../Components/Language/LanguageSwitch';
 
-const CV = ({ language }) => {
+const CV = () => {
+  const { language } = useLanguage();
   {
     /**Objekt für die Tabellendaten  */
   }
@@ -29,22 +31,22 @@ const CV = ({ language }) => {
       degree: 'Software Entwicklerin MERN Dev',
       institution: 'DCI Digital Career Institute',
       period: '07/2025',
-      pdf: '../assets/Zertifikat_Weber, Sabine_MAT TZ 23-D03.pdf',
-      img: '../img/DCI.png',
+      pdf: './Images/Zertifikat_Weber, Sabine_MAT TZ 23-D03.pdf',
+      img: 'Images/DCI.png',
     },
     {
       degree: 'Bachelor of Arts, Angewandte Medien',
       institution: 'EMBA / HS Mittweida',
       period: '02/2017',
-      pdf: '../assets/Bachelorurkunde.pdf',
-      img: '../img/BA.png',
+      pdf: './Images/Bachelorurkunde.pdf',
+      img: 'Images/BA.png',
     },
     {
       degree: 'staatlich anerkannte Erzieherin',
       institution: 'DBI Johannes Falk',
       period: '08/2011',
-      pdf: '../assets/Zeugnis Erzieher.pdf',
-      img: '../img/DBI.png',
+      pdf: './Images/Erzieherzeugnis.pdf',
+      img: 'Images/DBI.png',
     },
   ];
   const workExperienceData = [
@@ -63,20 +65,22 @@ const CV = ({ language }) => {
       position: 'Customer Service Agent',
       company: 'KMK kinderzimmer GmbH',
       period: '11/2022 - 03/2023',
-      pdf: '../assets/Zwischenzeugnis Customer Support.pdf',
-      img: '../img/KMK CS.png',
+      pdf: './Images/Zwischenzeugnis_CustomerSupport.pdf',
+      img: './Images/KMK CS.png',
     },
     {
       position: 'Kitaleitung',
       company: 'KMK kinderzimmer Valentinshof GmbH',
       period: '04/2021 - 10/2022',
-      img: '../img/KMK VH.png',
+      pdf: './Images/ZwischenzeugnisVH.pdf',
+      img: './Images/KMK VH.png',
     },
     {
       position: 'Erzieherin und stellvertretende Kitaleitung',
       company: 'KMK kinderzimmer Lohsepark GmbH',
       period: '05/2018 - 03/2021',
-      img: '../img/KMK LP.png',
+      pdf: './Images/ZwischenzeugnisLP.pdf',
+      img: '../Images/KMK LP.png',
     },
     {
       position: 'Elternzeit',
@@ -87,7 +91,8 @@ const CV = ({ language }) => {
       position: 'Erzieherin',
       company: 'Kinderforum Hamburg',
       period: '08/2013 - 03/2017',
-      img: '../img/AZ-Kinderforum.png',
+      pdf: './Images/ArbeitszeugnisKinderforum.pdf',
+      img: '../Images/AZ-Kinderforum.png',
     },
     {
       position: 'Erzieherin',
@@ -129,11 +134,11 @@ const CV = ({ language }) => {
               <td>
                 <a href={item.pdf} target="_blank" rel="noopener noreferrer">
                   <img
+                    className="preview"
                     src={item.img}
                     alt={isEducation ? 'Zertifikat' : 'Arbeitszeugnis'}
                   />
                 </a>
-                {/**Zeugnisse und Pfade überprüfen !! */}
               </td>
             )}
           </tr>

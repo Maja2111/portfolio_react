@@ -320,6 +320,7 @@ Review und Anpassung der Media Queries
 - Standardisierung der Media Queries über alle Komponenten
 - Hintergrund im Header auf den Pages anpassen
 - Responsives Design zusammenfassen und vereinheitlichen
+- Flaggen statt Sprachcodes verwenden
 
 4. Testing:
 
@@ -334,3 +335,7 @@ Review und Anpassung der Media Queries
 - Integration des Projekt-Carousels
 - Implementierung des BackToHome-Buttons
 - Feinabstimmung des responsiven Designs
+
+<img src="https://e7.pngegg.com/pngimages/99/201/png-clipart-arrow-computer-icons-symbol-down-arrow-angle-logo.png" alt="Pfeil" width="50">
+
+24.10.2024

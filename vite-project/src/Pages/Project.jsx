@@ -14,7 +14,7 @@ import React, { useState } from 'react';
 import '../Styling/stylingPages/pagesStyling.css';
 import '../Styling/stylingPages/projectPage.css';
 import BackToHomeButton from '../Components/Buttons/BackToHome';
-import LanguageSwitch from '../Components/Buttons/LanguageSwitch';
+import LanguageSwitch from '../Components/Language/LanguageSwitch';
 import Carousel from '../Components/Carousel/Carousel';
 import { projects } from '../utils/projectData';
 

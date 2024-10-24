@@ -60,14 +60,14 @@ tr:hover {
 }
 
 /* Styling für die Zertifikatsbilder */
-td img {
-  max-width: 50px;
+.preview {
+  width: 50px;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-td img:hover {
+.preview:hover {
   transform: scale(1.2);
 }
 

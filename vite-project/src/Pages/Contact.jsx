@@ -23,10 +23,12 @@ import {
   faGithub,
   faSlack,
 } from '@fortawesome/free-brands-svg-icons';
-import LanguageSwitch from '../Components/Buttons/LanguageSwitch';
+import { useLanguage } from '../Components/Language/LanguageContext';
+import LanguageSwitch from '../Components/Language/LanguageSwitch';
 import BackHomeButton from '../Components/Buttons/BackToHome';
 
 const Contact = () => {
+  const { language } = useLanguage();
   //State für Formularfelder
   const [formData, setFormData] = useState({
     fullname: '',
@@ -51,7 +53,9 @@ const Contact = () => {
     <div className="contactPage">
       <header>
         <div className="containerHeader">
-          <h1 className="animateTitle">Contact</h1>
+          <h1 className="animateTitle">
+            {language === 'de' ? 'Kontakt' : 'Contact'}
+          </h1>
           <LanguageSwitch />
         </div>
       </header>
@@ -59,20 +63,22 @@ const Contact = () => {
       <main className="contactMain">
         <form className="contactForm" onSubmit={handleSubmit}>
           <div className="formGroup">
-            <label htmlFor="fullname">Vor-und Nachname</label>
+            <label htmlFor="fullname">
+              {language === 'de' ? 'dein Vor-und Nachname' : 'your fullname'}
+            </label>
             <input
               type="text"
               id="fullname"
               name="fullname"
               value={formData.fullname}
               onChange={handleChange}
-              placeholder="Dein Vor-und Nachname"
+              placeholder="Max Mustermann"
             />
             {/**schließendes div formGroup fullname */}
           </div>
           <div className="fromgroup">
-            <label htmlFor="email" placeholder="Deine Email">
-              Email
+            <label htmlFor="email">
+              {language === 'de' ? 'deine  Email' : 'your email'}
             </label>
             <input
               type="email"
@@ -80,12 +86,14 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Deine Email"
+              placeholder="max@mustermann.de"
             />
             {/**schließendes div formGroup email */}
           </div>
           <div className="formGroup">
-            <label htmlFor="message"></label>
+            <label htmlFor="message">
+              {language === 'de' ? 'deine Nachricht' : 'your message'}
+            </label>
             <textarea
               id="message"
               name="message"
@@ -93,10 +101,7 @@ const Contact = () => {
               onChange={handleChange}
               cols="30"
               rows="10"
-              placeholder="deine Nachricht für mich"
-            >
-              Nachricht
-            </textarea>
+            ></textarea>
             {/**schließendes div formGroup message */}
           </div>
           <button type="submit">Senden</button>
@@ -135,7 +140,7 @@ const Contact = () => {
       </main>
 
       <footer>
-        <p>&copy; 2023 Sabine Weber</p>
+        <p>&copy; 2024 Sabine Weber</p>
         <BackHomeButton />
       </footer>
       {/**schließendes div contactPage */}

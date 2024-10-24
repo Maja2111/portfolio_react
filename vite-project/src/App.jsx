@@ -12,21 +12,24 @@ import CVTile from './Components/Tiles/CVTile';
 import ContactTile from './Components/Tiles/ContactTile';
 import ProjectTile from './Components/Tiles/ProjectTile';
 import IconsTile from './Components/Tiles/IconsTile';
-import LanguageSwitch from './Components/Buttons/LanguageSwitch';
+import { LanguageProvider } from './Components/Language/LanguageContext';
+import LanguageSwitch from './Components/Language/LanguageSwitch';
 
 function App() {
   return (
-    <div className="app">
-      <LanguageSwitch />
-      <nav className="tilecontainer">
-        <MainTile />
-        <AboutmeTile />
-        <CVTile />
-        <ContactTile />
-        <ProjectTile />
-        <IconsTile />
-      </nav>
-    </div>
+    <LanguageProvider>
+      <div className="app">
+        <LanguageSwitch />
+        <nav className="tilecontainer">
+          <MainTile />
+          <AboutmeTile />
+          <CVTile />
+          <ContactTile />
+          <ProjectTile />
+          <IconsTile />
+        </nav>
+      </div>
+    </LanguageProvider>
   );
 }
 
