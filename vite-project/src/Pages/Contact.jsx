@@ -45,7 +45,7 @@ const Contact = () => {
   //Eventhandler für den Submit Button
   const handleSubmit = (event) => {
     event.preventDefault();
-    //Email funktionalität einbauen!!!!!
+    //hier soll eine email gesendet werden- Infos in der Readme
     console.log('Form submitted:', formData);
   };
 

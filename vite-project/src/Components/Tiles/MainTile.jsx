@@ -23,7 +23,7 @@ const MainTile = () => {
               zukünftige Web-und Software Developer
             </h2>
             <img
-              src="./src/Images/MERN-img.png"
+              src="Images/MERN-img.png"
               alt="MERN-Stack-Logo"
               className="maintileimg"
             />

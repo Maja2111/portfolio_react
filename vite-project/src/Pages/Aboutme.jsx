@@ -21,7 +21,7 @@ const AboutMe = () => {
       <header>
         {/*animateTitle findet Verwendung in pagesStyling.css und wird auf jeder page benötigt*/}
         <h1 className="animateTitle">
-          {language === 'de' ? 'Herzlich Willkommen' : 'Warm Weclome'}
+          {language === 'de' ? 'Herzlich Willkommen' : 'Warm Welcome'}
         </h1>
         <LanguageSwitch />
       </header>

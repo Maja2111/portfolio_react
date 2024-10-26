@@ -147,7 +147,7 @@ const CV = () => {
     </table>
   );
   return (
-    <div className="cvContainer">
+    <div className="cvContainer tilesmall">
       <header className="cvHeader">
         <h1 className="animateTitle">
           {language === 'de' ? 'Lebenslauf' : 'Curriculum Vitae'}

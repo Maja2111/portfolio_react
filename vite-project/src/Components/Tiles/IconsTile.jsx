@@ -31,16 +31,16 @@ const IconsTile = () => {
           <div className="tilecontent">
             <h2>Skills</h2>
             <div>
-              <FontAwesomeIcon icon={faGithub} />
-              <FontAwesomeIcon icon={faHtml5} />
-              <FontAwesomeIcon icon={faCss3} />
-              <FontAwesomeIcon icon={faSass} />
-              <FontAwesomeIcon icon={faJs} />
-              <FontAwesomeIcon icon={faReact} />
-              <FontAwesomeIcon icon={faBootstrap} />
-              <FontAwesomeIcon icon={faUbuntu} />
-              <FontAwesomeIcon icon={faApple} />
-              <FontAwesomeIcon icon={faMarkdown} />
+              <FontAwesomeIcon icon={faGithub} className="icons" />
+              <FontAwesomeIcon icon={faHtml5} className="icons" />
+              <FontAwesomeIcon icon={faCss3} className="icons" />
+              <FontAwesomeIcon icon={faSass} className="icons" />
+              <FontAwesomeIcon icon={faJs} className="icons" />
+              <FontAwesomeIcon icon={faReact} className="icons" />
+              <FontAwesomeIcon icon={faBootstrap} className="icons" />
+              <FontAwesomeIcon icon={faUbuntu} className="icons" />
+              <FontAwesomeIcon icon={faApple} className="icons" />
+              <FontAwesomeIcon icon={faMarkdown} className="icons" />
             </div>
           </div>
         )}

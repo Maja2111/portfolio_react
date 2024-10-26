@@ -1,7 +1,7 @@
 .tilecontainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -15,7 +15,7 @@
 }
 
 .tileicon {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .tilelink {
@@ -24,47 +24,54 @@
   height: 100%;
 }
 
-.tilesmall {
-  width: 100%;
-  height: 100%;
-  padding: 1.5rem;
-  background: rgba(45, 45, 45, 0.9);
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2),
-    -15px -15px 30px rgba(255, 255, 255, 0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.tilesmall:hover {
-  transform: scale(1.05);
-  background: rgba(60, 60, 60, 0.9);
-}
-
-.aboutmetile,
-.contacttile,
-.cvtile,
-.iconstile {
-  width: 200px;
-  height: 200px;
-  margin: 1rem;
-}
 .aboutmetile,
 .contacttile,
 .cvtile,
 .iconstile,
 .maintile,
 .projecttile {
-  background: rgba(45, 45, 45, 0.9);
-  padding: 1rem;
+  width: 400px; /* Einheitliche Breite */
+  height: 200px; /* Einheitliche Höhe */
   border-radius: 20px;
-  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2),
-    -15px -15px 30px rgba(255, 255, 255, 0.05);
+  margin: 1rem; /* Einheitlicher Abstand */
+}
+
+.icons {
+  font-size: 2rem; /* Größe der Icons */
+  margin: 0 1rem; /* Horizontaler Abstand zwischen den Icons */
 }
 
 .maintileimg {
   width: 4rem;
+}
+
+.maintile,
+.iconstile,
+.tilesmall {
+  width: 100%; /* Einheitliche Breite */
+  height: 300px; /* Einheitliche Höhe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid white;
+  margin: 1rem; /* Einheitlicher Abstand */
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+  background: linear-gradient(
+    to bottom right,
+    #4a4a4a,
+    #1a1a1a
+  ); /* Linearer Verlauf von Grau zu Schwarz */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5),
+    -5px -5px 15px rgba(255, 255, 255, 0.1); /* Box-Shadow */
+}
+
+@media (max-width: 600px) {
+  .maintile,
+  .iconstile,
+  .tilesmall {
+    height: 150px; /* Kleinere Höhe für mobile Geräte */
+  }
 }

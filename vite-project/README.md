@@ -64,53 +64,43 @@ Das Portfolio zeigt meine Fähigkeiten in Webentwicklung, Design und Projektmana
 
 ```
 vite-project/
-│
-├── src/
-│   ├── assets/
-│   │   └── react.svg
-│   │
-│   ├── components/
-│   │   ├── buttons/
-│   │   │   ├── BackToHome.jsx
-│   │   │   └── LanguageSwitch.jsx
-│   │   │
-│   │   ├── carousel/
-│   │   │   └── Carousel.jsx
-│   │   │
-│   │   └── tiles/
-│   │       ├── CVTile.jsx
-│   │       ├── ContactTile.jsx
-│   │       ├── AboutmeTile.jsx
-│   │       ├── ProjectTile.jsx
-│   │       ├── IconTile.jsx
-│   │       └── MainTile.jsx
-│   │
-│   ├── pages/
-│   │   ├── AboutMe.jsx
-│   │   ├── Project.jsx
-│   │   ├── CV.jsx
-│   │   └── Contact.jsx
-│   │
-│   ├── styles/
-│   │   ├── carousel.css
-│   │   ├── tile.css
-│   │   ├── pagesStyling.css
-│   │   ├── backToHomeButton.css
-│   │   └── languageSwitchButton.css
-│   │
-│   ├── utils/
-│   │   └── linksToProjects.js
-│   │
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   ├── main.jsx
-│   └── router.jsx
-│
-├── public/
-│   └── vite.svg
-│
-├── .gitignore
+│ ├── src/
+│ ├── assets/
+│ │ └── react.svg
+│ │ │ ├── components/
+│ │ ├── buttons/
+│ │ │ ├── BackToHome.jsx
+│ │ │ └── LanguageSwitch.jsx
+│ │ │ │ │ ├── carousel/
+│ │ │ └── Carousel.jsx
+│ │ │ │ │ └── tiles/
+│ │ ├── CVTile.jsx
+│ │ ├── ContactTile.jsx
+│ │ ├── AboutmeTile.jsx
+│ │ ├── ProjectTile.jsx
+│ │ ├── IconTile.jsx
+│ │ └── MainTile.jsx
+│ │ │ ├── pages/
+│ │ ├── AboutMe.jsx
+│ │ ├── Project.jsx
+│ │ ├── CV.jsx
+│ │ └── Contact.jsx
+│ │ │ ├── styles/
+│ │ ├── carousel.css
+│ │ ├── tile.css
+│ │ ├── pagesStyling.css
+│ │ ├── backToHomeButton.css
+│ │ └── languageSwitchButton.css
+│ │ │ ├── utils/
+│ │ └── linksToProjects.js
+│ │ │ ├── App.jsx
+│ ├── App.css
+│ ├── index.css
+│ ├── main.jsx
+│ └── router.jsx
+│ ├── public/
+│ └── vite.svg
+│ ├── .gitignore
 ├── README.md
 ├── index.html
 ├── vite.config.js
@@ -180,7 +170,7 @@ export default AboutMeTile;
   - `/cv`: Lebenslauf
   - `/contact`: Kontakt
 
-### Letzte Entwicklungsschritte
+### Entwicklungsfortschritt
 
 1. Implementierung der HoverableTileSmall Komponente
 
@@ -230,7 +220,7 @@ export default AboutMeTile;
 
 22.10.2024
 
-### Letzte Entwicklungsschritte
+### Entwicklungsfortschritt
 
 ### Implementierung der Tile-Komponenten
 
@@ -283,7 +273,7 @@ Diese Zusammenfassung zeigt die wichtigsten Entwicklungsfortschritte und gibt ei
 
 23.10.2024
 
-### Letzte Entwicklungsschritte
+### Entwicklungsfortschritt
 
 nice to do - responsiv design zusammenfassen
 nice to have - hintergrund im header auf den pages
@@ -339,3 +329,161 @@ Review und Anpassung der Media Queries
 <img src="https://e7.pngegg.com/pngimages/99/201/png-clipart-arrow-computer-icons-symbol-down-arrow-angle-logo.png" alt="Pfeil" width="50">
 
 24.10.2024
+
+### Entwicklungsfortschritt
+
+1. Implementierung des Sprachkontexts
+
+- Erfolgreich den LanguageProvider in die Router-Struktur integriert.
+- Verwendung von createBrowserRouter für das Routing-System beibehalten.
+- LanguageProvider umschließt nun den gesamten RouterProvider, um globalen Zugriff auf den Sprachkontext zu ermöglichen.
+
+2. Router-Konfiguration angepasst
+
+- Aktualisierung der Router-Konfiguration zur Integration des `LanguageProvider`.
+- Beibehaltung der bestehenden Routenstruktur mit Hauptkomponenten wie App, AboutMe, CV, Contact und Projects.
+
+3. Sprachumschaltung
+
+- Implementierung des useLanguage-Hooks in verschiedenen Komponenten.
+- Ermöglicht nun dynamisches Umschalten zwischen Sprachen in allen Komponenten.
+
+4. AboutMe-Komponente
+
+- Erfolgreich den useLanguage-Hook in der AboutMe-Komponente implementiert.
+- Inhalte können jetzt basierend auf der ausgewählten Sprache dynamisch angezeigt werden.
+
+5. Globale Verfügbarkeit des LanguageSwitch
+
+- Überlegungen zur Platzierung des LanguageSwitch für globale Verfügbarkeit (z.B. in einem gemeinsamen Layout oder in der App-Komponente).
+
+6. Codestruktur und Organisation
+
+- Beibehaltung der bestehenden Komponentenstruktur bei gleichzeitiger Integration neuer Funktionalitäten.
+- Verbesserung der Codeorganisation für einfachere Wartung und Erweiterbarkeit.
+
+<img src="https://e7.pngegg.com/pngimages/99/201/png-clipart-arrow-computer-icons-symbol-down-arrow-angle-logo.png" alt="Pfeil" width="50">
+
+26.10.2024
+
+## E-Mail-Funktionalität in der Kontaktseite
+
+### Option 1: Verwendung von EmailJS
+
+EmailJS ist ein einfacher Dienst, um E-Mails direkt von deiner Anwendung aus zu versenden, ohne einen eigenen Server zu benötigen.
+
+#### Schritte zur Implementierung mit EmailJS:
+
+1. **Registrierung bei EmailJS**:
+
+   - Gehe zu [EmailJS](https://www.emailjs.com/) und erstelle ein kostenloses Konto.
+
+2. **E-Mail-Dienst hinzufügen**:
+
+   - Füge deinen E-Mail-Dienst (z.B. Gmail, Outlook) hinzu und erstelle eine neue E-Mail-Vorlage.
+
+3. **Installation der EmailJS-Bibliothek**:
+
+   - Führe den folgenden Befehl aus, um die EmailJS-Bibliothek in deinem Projekt zu installieren:
+     ```bash
+     npm install emailjs-com
+     ```
+
+4. **Implementierung der E-Mail-Funktionalität in der `Contact`-Komponente**:
+
+   - Importiere die EmailJS-Bibliothek und implementiere die `handleSubmit`-Funktion in deiner `Contact`-Komponente:
+
+   ```javascript
+   import React, { useState } from 'react';
+   import emailjs from 'emailjs-com'; // Importiere die EmailJS-Bibliothek
+
+   const Contact = () => {
+     const [formData, setFormData] = useState({
+       fullname: '',
+       email: '',
+       message: '',
+     });
+
+     const handleChange = (event) => {
+       const { name, value } = event.target;
+       setFormData((prevState) => ({ ...prevState, [name]: value }));
+     };
+
+     const handleSubmit = (event) => {
+       event.preventDefault();
+
+       // E-Mail-Funktionalität
+       emailjs
+         .send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID')
+         .then(
+           (response) => {
+             console.log(
+               'E-Mail erfolgreich gesendet!',
+               response.status,
+               response.text
+             );
+             // Optional: Formular zurücksetzen oder eine Erfolgsmeldung anzeigen
+             setFormData({ fullname: '', email: '', message: '' });
+           },
+           (err) => {
+             console.error('E-Mail konnte nicht gesendet werden.', err);
+           }
+         );
+     };
+
+     return (
+       <form className="contactForm" onSubmit={handleSubmit}>
+         {/* Formularfelder hier */}
+         <button type="submit">Senden</button>
+       </form>
+     );
+   };
+
+   export default Contact;
+   ```
+
+5. Implementierung des Sprachkontexts:
+
+- Der `LanguageProvider` wurde erfolgreich in die Router-Struktur integriert, um globalen Zugriff auf den Sprachkontext zu ermöglichen.
+
+2. Anpassung der Router-Konfiguration:
+
+- Die Router-Konfiguration wurde aktualisiert, um den `LanguageProvider` zu integrieren, während die bestehende Routenstruktur beibehalten wurde.
+
+3. Sprachumschaltung:
+
+- Der `useLanguage-Hook` wurde in verschiedenen Komponenten implementiert, was nun ein dynamisches Umschalten zwischen den Sprachen in der gesamten Anwendung ermöglicht.
+
+4. AboutMe-Komponente:
+
+- Der `useLanguage-Hook` wurde erfolgreich in der AboutMe-Komponente implementiert, sodass die Inhalte basierend auf der ausgewählten Sprache dynamisch angezeigt werden können.
+
+5. Globale Verfügbarkeit des LanguageSwitch:
+
+- Überlegungen zur optimalen Platzierung des `LanguageSwitch` wurden angestellt, um eine globale Verfügbarkeit zu gewährleisten (z.B. in einem gemeinsamen Layout oder in der App-Komponente).
+
+6. Codestruktur und Organisation:
+
+- Die bestehende Komponentenstruktur wurde beibehalten, während neue Funktionalitäten integriert wurden, um die Codeorganisation für einfachere Wartung und Erweiterbarkeit zu verbessern.
+
+## Nice to have
+
+### Standardisierung der Media Queries:
+
+- Einheitliche Anwendung von Media Queries über alle Komponenten zur Verbesserung der responsiven Darstellung.
+
+### Hintergrund im Header anpassen:
+
+- Implementierung eines ansprechenden Hintergrunds im Header auf den Seiten zur visuellen Aufwertung.
+
+### Responsives Design zusammenfassen und vereinheitlichen:
+
+- Überprüfung und Optimierung des responsiven Designs für eine konsistente Benutzererfahrung auf verschiedenen Geräten.
+
+### Verwendung von Flaggen statt Sprachcodes:
+
+- Implementierung von Flaggen zur Darstellung der Sprachumschaltung anstelle von Textcodes, um die Benutzerfreundlichkeit zu erhöhen.
+
+### Feinabstimmung des Designs:
+
+- Weitere Anpassungen und Optimierungen des Designs zur Verbesserung der Benutzeroberfläche und Benutzererfahrung.
